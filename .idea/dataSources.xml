@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="hibernate_db@localhost" uuid="76fcec12-3940-4f54-b101-bba0b6c90430">
+    <data-source source="LOCAL" name="hibernate_db@localhost" uuid="d663e340-38b8-40e2-96ac-ac55ed9bb0bb">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/hibernate_db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="Hibernate/Hibernate" uuid="8be6d5cf-e44b-4ab6-9a68-01b9bc232154">
+    <data-source source="LOCAL" name="Hibernate/Hibernate" uuid="d72a5f30-c440-4bb1-b7f0-eebda11e9bc8">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
