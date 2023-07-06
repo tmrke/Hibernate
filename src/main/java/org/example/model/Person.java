@@ -1,7 +1,9 @@
 package org.example.model;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.Cascade;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -16,7 +18,11 @@ public class Person {
     @Column
     private int age;
 
-    @OneToMany(mappedBy = "owner", cascade = CascadeType.PERSIST)
+    @OneToMany(mappedBy = "owner")
+    @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE,
+            org.hibernate.annotations.CascadeType.REMOVE,
+
+    })
     private List<Item> items;
 
     public Person() {
@@ -62,5 +68,14 @@ public class Person {
     @Override
     public String toString() {
         return this.name + ", " + this.age + " years";
+    }
+
+    public void addItem(Item item) {
+        if (this.items == null) {
+            this.items = new ArrayList<>();
+        }
+
+        this.items.add(item);
+        item.setOwner(this);
     }
 }
